@@ -34,6 +34,11 @@ export default {
     selected(selected) {
       this.$emit('update:modelValue', selected)
     },
+    modelValue(modelValue) {
+      if (this.selected != modelValue) {
+        this.selected = modelValue
+      }
+    }
   },
   methods: {
     focus() {
